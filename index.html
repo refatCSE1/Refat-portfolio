@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MD. Refat Hossain | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous"/>
+  <style>
+    /* Clean & Responsive Styles */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fbbf24;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid #fde68a;
+      outline-offset: 2px;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #1e293bcc;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      backdrop-filter: blur(12px);
+    }
+    nav a {
+      font-weight: 600;
+      font-size: 1.1rem;
+      position: relative;
+      cursor: pointer;
+    }
+    nav a.active, nav a:hover { color: #fde68a; }
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #fde68a;
+    }
+    section {
+      min-height: 100vh;
+      padding: 5rem 1.5rem 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+      scroll-margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #fbbf24;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: #ddd;
+      text-align: center;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+    #home img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #fbbf24;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px #fbbf24;
+      transition: transform 0.3s ease;
+    }
+    #home img:hover {
+      transform: scale(1.05) rotate(3deg);
+    }
+    .btn {
+      background: #fbbf24;
+      color: #1e293b;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(251,191,36,0.6);
+      transition: background 0.3s ease;
+    }
+    .btn:hover, .btn:focus {
+      background: #d1a10d;
+      outline: none;
+    }
+    #about ul, #skills ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    #about li, #skills li {
+      background: #1e293b;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      color: #fbbf24;
+      font-weight: 600;
+      min-width: 140px;
+      text-align: center;
+    }
+    .progress-bar {
+      height: 10px;
+      background: #334155;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 5px;
+      width: 100%;
+    }
+    .progress-bar > div {
+      height: 100%;
+      background: #fbbf24;
+      width: 0;
+      transition: width 1.5s ease;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 1rem;
+      font-family: inherit;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    form input:focus, form textarea:focus {
+      outline: 3px solid #fbbf24;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1e293b;
+      color: #fbbf24;
+      user-select: none;
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      nav { flex-wrap: wrap; gap: 1rem; }
+      #about li, #skills li { min-width: 120px; padding: 0.75rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home" tabindex="0" aria-label="Home section">
+    <img src="https://i.pravatar.cc/180?img=12" alt="MD. Refat Hossain" />
+    <h1>MD. Refat Hossain</h1>
+    <h2>Passionate CSE Student | Video Editor | Content Creator</h2>
+    <button class="btn" aria-label="Scroll to contact form" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+  </section>
+
+  <section id="about" tabindex="0" aria-label="About section">
+    <h2>About Me</h2>
+    <p>I’m a Computer Science & Engineering student at Daffodil International University. I’m also a professional video editor, content creator, and SEO learner passionate about digital media and technology.</p>
+    <ul>
+      <li>CSE Student</li>
+      <li>Professional Video Editor</li>
+      <li>Content Creator</li>
+      <li>SEO Practitioner</li>
+    </ul>
+  </section>
+
+  <section id="skills" tabindex="0" aria-label="Skills section">
+    <h2>Skills & Tools</h2>
+    <ul>
+      <li>
+        <strong>Programming & Web</strong>
+        <div class="progress-bar"><div style="width:85%"></div></div>
+      </li>
+      <li>
+        <strong>Video Editing</strong>
+        <div class="progress-bar"><div style="width:75%"></div></div>
+      </li>
+      <li>
+        <strong>Content Creation</strong>
+        <div class="progress-bar"><div style="width:80%"></div></div>
+      </li>
+      <li>
+        <strong>SEO Practice</strong>
+        <div class="progress-bar"><div style="width:70%"></div></div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact" tabindex="0" aria-label="Contact section">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mgebdznl" method="POST" aria-label="Contact form">
+      <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
+      <input type="email" name="email" placeholder="Your Email" required autocomplete="email" />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn" aria-label="Send message">Send Message</button>
+    </form>
+  </section>
+
+  <footer role="contentinfo">
+    © 2025 MD. Refat Hossain. All rights reserved.
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+
+    function onScroll() {
+      const scrollPos = window.scrollY + 100;
+      sections.forEach(section => {
+        if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          const activeLink = document.querySelector(`nav a[href="#${section.id}"]`);
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('load', onScroll);
+
+    // Animate skill bars once when visible
+    let skillsAnimated = false;
+    function animateSkills() {
+      const skillSection = document.getElementById('skills');
+      if (!skillsAnimated && skillSection.getBoundingClientRect().top < window.innerHeight * 0.9) {
+        document.querySelectorAll('.progress-bar > div').forEach(bar => {
+          const width = bar.style.width;
+          bar.style.width = '0';
+          setTimeout(() => {
+            bar.style.width = width;
+          }, 100);
+        });
+        skillsAnimated = true;
+      }
+    }
+
+    window.addEventListener('scroll', animateSkills);
+    window.addEventListener('load', animateSkills);
+  </script>
+</body>
+</html>
